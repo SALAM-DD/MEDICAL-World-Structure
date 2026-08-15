@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Medical World</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+900: '#0b192c',
+950: '#060d19',
+800: '#13233c',
+},
+brand: {
+blue: '#0072CE',
+green: '#74B71B',
+yellow: '#74B71B',
+accent: '#0072CE'
+}
+}
+}
+}
+}
+</script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 min-h-screen flex flex-col justify-between">
+<!-- Navigation -->
+<nav class="bg-navy-900 text-white flex justify-between items-center px-8 py-5 border-b border-white/10">
+<a href="index.html" class="flex items-center gap-3">
+<img src="logo-icon.svg" alt="Medical World Icon" class="h-9 w-auto">
+<span class="font-bold text-xl tracking-tight text-white flex items-center">
+<span class="text-brand-blue">Medical</span>&nbsp;<span class="text-brand-green">World</span></span>
+</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+<a href="index.html" class="hover:text-white transition">Home</a>
+<a href="learning.html" class="hover:text-white transition">Learning</a>
+<a href="quizzes.html" class="hover:text-white transition">Quizzes</a>
+<a href="community.html" class="hover:text-white transition">Community</a>
+<a href="competitions.html" class="hover:text-white transition">Competitions</a>
+<a href="ai-tools.html" class="hover:text-white transition">AI Tools</a>
+</div>
+<div class="flex gap-4">
+<a href="login.html" class="px-5 py-2 text-sm font-semibold rounded-full border border-gray-600 hover:border-white transition">Log In</a>
+<a href="signup.html" class="px-5 py-2 text-sm font-semibold rounded-full bg-brand-green text-white hover:bg-[#639F16] transition">Get Started Free</a>
+</div>
+</nav>
+
+<!-- Header -->
+<header class="bg-navy-900 text-white px-8 py-16 lg:px-24">
+<div class="max-w-4xl">
+<div class="inline-block bg-brand-blue/30 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-brand-blue/30">
+Founded in 2018
+</div>
+<h1 class="text-4xl lg:text-5xl font-bold mb-4">Empowering the Next Generation of <span class="text-brand-green">Medical Minds</span></h1>
+<p class="text-gray-300 text-lg leading-relaxed">
+Medical World was created to solve a fundamental challenge: medical education is fragmented. We unify notes, past question banks, live competitions, and AI study assistants into one seamless global ecosystem.
+</p>
+</div>
+</header>
+
+<!-- Story & Founder -->
+<main class="py-16 px-8 lg:px-24 max-w-7xl mx-auto w-full space-y-16">
+<section class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<span class="text-xs font-bold text-brand-blue uppercase tracking-wider">Our Origin Story</span>
+<h2 class="text-3xl font-bold text-navy-900">From a Student Initiative to a Global Ecosystem</h2>
+<p class="text-gray-600 leading-relaxed text-sm">
+Founded in 2018 by <strong>Abdulazeez F. O.</strong>, Medical World began as a peer study circle designed to help medical students tackle tough professional examinations. Over the past 8 years, it has grown into an international platform serving over 10,000 members across universities worldwide.
+</p>
+<p class="text-gray-600 leading-relaxed text-sm">
+Today, we are rebuilding the platform from the ground up to incorporate advanced AI study assistants, interactive clinical simulations, and real-time national leaderboard leagues.
+</p>
+</div>
+<div class="bg-navy-900 text-white p-8 rounded-3xl shadow-xl border border-white/10">
+<div class="text-3xl font-serif text-brand-green mb-4">“</div>
+<blockquote class="text-base font-medium italic text-gray-200 mb-6 leading-relaxed">
+Medicine is a lifelong journey of learning. Our mission is to make sure no student or doctor ever has to walk that path without the best tools, community support, and structured guidance.
+</blockquote>
+<div class="font-bold text-white text-base">Abdulazeez F. O.</div>
+<div class="text-xs text-brand-green font-semibold">Founder & Visionary, Medical World</div>
+</div>
+</section>
+
+<!-- Partners Section -->
+<section id="partners" class="bg-white p-10 rounded-3xl shadow-sm border border-gray-200">
+<h2 class="text-2xl font-bold text-navy-900 text-center mb-2">Institutional & Medical Partners</h2>
+<p class="text-gray-500 text-sm text-center mb-8">Collaborating with medical associations and university chapters</p>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm font-bold text-gray-700">
+<div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center justify-center">
+<span class="text-2xl mb-2">🏥</span>
+<span>Medical Student Associations (NiMSA)</span>
+</div>
+<div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center justify-center">
+<span class="text-2xl mb-2">🎓</span>
+<span>University Clinical Chapters</span>
+</div>
+<div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center justify-center">
+<span class="text-2xl mb-2">📚</span>
+<span>USMLE / PLAB Study Networks</span>
+</div>
+<div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center justify-center">
+<span class="text-2xl mb-2">🌐</span>
+<span>Global Health Initiatives</span>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy-950 text-gray-400 py-16 px-8 lg:px-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-gray-800 pb-12">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<img src="logo.svg" alt="Medical World Logo" class="h-10 w-auto">
+</div>
+<p class="text-sm">Rebuilding a global medical learning ecosystem — one student at a time.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Platform</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="learning.html" class="hover:text-white transition">Learning Hub</a></li>
+<li><a href="quizzes.html" class="hover:text-white transition">Quizzes</a></li>
+<li><a href="quizzes.html#past-questions" class="hover:text-white transition">Past Questions</a></li>
+<li><a href="ai-tools.html" class="hover:text-white transition">AI Assistant</a></li>
+<li><a href="competitions.html#leaderboard" class="hover:text-white transition">Leaderboard</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Community</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="community.html" class="hover:text-white transition">News Feed</a></li>
+<li><a href="community.html#discussions" class="hover:text-white transition">Discussions</a></li>
+<li><a href="competitions.html" class="hover:text-white transition">Competitions</a></li>
+<li><a href="community.html#members" class="hover:text-white transition">Members</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="about.html" class="text-white font-semibold">About Medical World</a></li>
+<li><a href="rebuild.html" class="hover:text-white transition">Join the Rebuild</a></li>
+<li><a href="about.html#partners" class="text-white font-semibold">Partners</a></li>
+<li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2026 Medical World. Founded by Abdulazeez F. O. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Hub - Medical World</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+900: '#0b192c',
+950: '#060d19',
+800: '#13233c',
+},
+brand: {
+blue: '#0072CE',
+green: '#74B71B',
+yellow: '#74B71B',
+accent: '#0072CE'
+}
+}
+}
+}
+}
+</script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 min-h-screen flex flex-col justify-between">
+<!-- Navigation -->
+<nav class="bg-navy-900 text-white flex justify-between items-center px-8 py-5 border-b border-white/10">
+<a href="index.html" class="flex items-center gap-3">
+<img src="logo-icon.svg" alt="Medical World Icon" class="h-9 w-auto">
+<span class="font-bold text-xl tracking-tight text-white flex items-center">
+<span class="text-brand-blue">Medical</span>&nbsp;<span class="text-brand-green">World</span></span>
+</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+<a href="index.html" class="hover:text-white transition">Home</a>
+<a href="learning.html" class="text-white border-b-2 border-brand-green pb-1">Learning</a>
+<a href="quizzes.html" class="hover:text-white transition">Quizzes</a>
+<a href="community.html" class="hover:text-white transition">Community</a>
+<a href="competitions.html" class="hover:text-white transition">Competitions</a>
+<a href="ai-tools.html" class="hover:text-white transition">AI Tools</a>
+</div>
+<div class="flex gap-4">
+<a href="login.html" class="px-5 py-2 text-sm font-semibold rounded-full border border-gray-600 hover:border-white transition">Log In</a>
+<a href="signup.html" class="px-5 py-2 text-sm font-semibold rounded-full bg-brand-green text-white hover:bg-[#639F16] transition">Get Started Free</a>
+</div>
+</nav>
+
+<!-- Learning Header -->
+<header class="bg-navy-900 text-white px-8 py-14 lg:px-24">
+<div class="max-w-4xl">
+<div class="inline-block bg-brand-blue/30 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-brand-blue/30">
+Curriculum-Structured Content
+</div>
+<h1 class="text-4xl lg:text-5xl font-bold mb-4">Medical <span class="text-brand-green">Learning Hub</span></h1>
+<p class="text-gray-300 text-lg mb-8">Access high-yield medical notes, interactive video summaries, 3D anatomical diagrams, and flashcard decks.</p>
+
+<!-- Search Bar -->
+<div class="relative max-w-2xl">
+<input type="text" placeholder="Search topics (e.g. Brachial Plexus, Cardiac Action Potential, Penicillin MOA)..." class="w-full pl-12 pr-32 py-4 rounded-2xl bg-white text-navy-900 font-medium placeholder-gray-400 focus:outline-none shadow-lg text-sm">
+<div class="absolute left-4 top-4 text-gray-400">
+🔍
+</div>
+<button onclick="alert('Searching medical database...');" class="absolute right-2 top-2 bg-brand-green text-white font-bold px-5 py-2.5 rounded-xl text-xs hover:bg-[#639F16] transition shadow">Search</button>
+</div>
+</div>
+</header>
+
+<!-- Main Hub Body -->
+<main class="py-12 px-8 lg:px-24 max-w-7xl mx-auto w-full">
+<!-- Subject Filter Tabs -->
+<div class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 pb-4">
+<button class="px-4 py-2 rounded-lg bg-navy-900 text-white text-sm font-bold shadow-sm">All Subjects</button>
+<button class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm font-semibold hover:bg-gray-100 transition">Gross Anatomy</button>
+<button class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm font-semibold hover:bg-gray-100 transition">Pharmacology</button>
+<button class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm font-semibold hover:bg-gray-100 transition">Pathology</button>
+<button class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm font-semibold hover:bg-gray-100 transition">Physiology</button>
+<button class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 text-sm font-semibold hover:bg-gray-100 transition">Clinical Medicine</button>
+</div>
+
+<!-- Grid of Resource Cards -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-1 rounded">Gross Anatomy</span>
+<span class="text-xs text-gray-400">45 mins • 28 Decks</span>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-2">Upper Limb & Brachial Plexus Neuroanatomy</h3>
+<p class="text-gray-500 text-sm mb-6">Comprehensive breakdown of roots, trunks, divisions, cords, and terminal branches with clinical lesions.</p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<span class="text-xs font-semibold text-gray-500">⭐ 4.9 (1,240 ratings)</span>
+<a href="#" onclick="alert('Opening Anatomy Module...'); return false;" class="text-blue-600 font-bold text-sm hover:underline">Start Note →</a>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-1 rounded">Pharmacology</span>
+<span class="text-xs text-gray-400">30 mins • Flashcards</span>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-2">Autonomic Nervous System & Anti-Hypertensives</h3>
+<p class="text-gray-500 text-sm mb-6">Mechanism of action, adverse reactions, contraindications, and high-yield USMLE/MBBS mnemonic charts.</p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<span class="text-xs font-semibold text-gray-500">⭐ 4.8 (980 ratings)</span>
+<a href="#" onclick="alert('Opening Pharmacology Decks...'); return false;" class="text-blue-600 font-bold text-sm hover:underline">Start Flashcards →</a>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded">Pathology</span>
+<span class="text-xs text-gray-400">60 mins • Case Video</span>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-2">Cardiovascular Pathology & Myocardial Infarction</h3>
+<p class="text-gray-500 text-sm mb-6">Histology timeline post-MI, ECG leads localization, biomarkers (Troponin, CK-MB), and acute management guidelines.</p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<span class="text-xs font-semibold text-gray-500">⭐ 5.0 (2,100 ratings)</span>
+<a href="#" onclick="alert('Playing Video Module...'); return false;" class="text-blue-600 font-bold text-sm hover:underline">Watch Video →</a>
+</div>
+</div>
+
+<!-- Card 4 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-purple-100 text-purple-700 text-xs font-bold px-2.5 py-1 rounded">Physiology</span>
+<span class="text-xs text-gray-400">40 mins • Notes</span>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-2">Renal Physiology & Acid-Base Disturbances</h3>
+<p class="text-gray-500 text-sm mb-6">Renin-Angiotensin-Aldosterone System (RAAS), Davenport diagrams, anion gap calculation, and clinical case studies.</p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<span class="text-xs font-semibold text-gray-500">⭐ 4.9 (850 ratings)</span>
+<a href="#" onclick="alert('Opening Renal Physiology Notes...'); return false;" class="text-blue-600 font-bold text-sm hover:underline">Read Module →</a>
+</div>
+</div>
+
+<!-- Card 5 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded">Clinical Medicine</span>
+<span class="text-xs text-gray-400">50 mins • OSCE Prep</span>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-2">Cardiovascular Examination & Murmur Identification</h3>
+<p class="text-gray-500 text-sm mb-6">Step-by-step clinical examination guide with audio recordings of systolic vs diastolic cardiac murmurs.</p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<span class="text-xs font-semibold text-gray-500">⭐ 4.9 (1,450 ratings)</span>
+<a href="#" onclick="alert('Launching OSCE Guide...'); return false;" class="text-blue-600 font-bold text-sm hover:underline">Start OSCE →</a>
+</div>
+</div>
+
+<!-- Card 6 -->
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-cyan-100 text-cyan-800 text-xs font-bold px-2.5 py-1 rounded">Biochemistry</span>
+<span class="text-xs text-gray-400">35 mins • High-Yield</span>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-2">Inborn Errors of Metabolism & Enzyme Kinetics</h3>
+<p class="text-gray-500 text-sm mb-6">Glycogen storage diseases, Phenylketonuria, Lineweaver-Burk plot interpretation, and metabolic pathways.</p>
+<div class="flex items-center justify-between pt-4 border-t border-gray-100">
+<span class="text-xs font-semibold text-gray-500">⭐ 4.7 (630 ratings)</span>
+<a href="#" onclick="alert('Opening Biochemistry Guide...'); return false;" class="text-blue-600 font-bold text-sm hover:underline">Start Learning →</a>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy-950 text-gray-400 py-16 px-8 lg:px-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-gray-800 pb-12">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<img src="logo.svg" alt="Medical World Logo" class="h-10 w-auto">
+</div>
+<p class="text-sm">Rebuilding a global medical learning ecosystem — one student at a time.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Platform</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="learning.html" class="text-white font-semibold">Learning Hub</a></li>
+<li><a href="quizzes.html" class="hover:text-white transition">Quizzes</a></li>
+<li><a href="quizzes.html#past-questions" class="hover:text-white transition">Past Questions</a></li>
+<li><a href="ai-tools.html" class="hover:text-white transition">AI Assistant</a></li>
+<li><a href="competitions.html#leaderboard" class="hover:text-white transition">Leaderboard</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Community</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="community.html" class="hover:text-white transition">News Feed</a></li>
+<li><a href="community.html#discussions" class="hover:text-white transition">Discussions</a></li>
+<li><a href="competitions.html" class="hover:text-white transition">Competitions</a></li>
+<li><a href="community.html#members" class="hover:text-white transition">Members</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="about.html" class="hover:text-white transition">About Medical World</a></li>
+<li><a href="rebuild.html" class="hover:text-white transition">Join the Rebuild</a></li>
+<li><a href="about.html#partners" class="hover:text-white transition">Partners</a></li>
+<li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2026 Medical World. Founded by Abdulazeez F. O. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>

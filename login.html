@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In - Medical World</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+900: '#0b192c',
+950: '#060d19',
+800: '#13233c',
+},
+brand: {
+blue: '#0072CE',
+green: '#74B71B',
+yellow: '#74B71B',
+accent: '#0072CE'
+}
+}
+}
+}
+}
+</script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-navy-900 min-h-screen flex flex-col justify-between">
+<!-- Navigation -->
+<nav class="bg-navy-900 text-white flex justify-between items-center px-8 py-5 border-b border-white/10">
+<a href="index.html" class="flex items-center gap-3">
+<img src="logo-icon.svg" alt="Medical World Icon" class="h-9 w-auto">
+<span class="font-bold text-xl tracking-tight text-white flex items-center">
+<span class="text-brand-blue">Medical</span>&nbsp;<span class="text-brand-green">World</span></span>
+</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+<a href="index.html" class="hover:text-white transition">Home</a>
+<a href="learning.html" class="hover:text-white transition">Learning</a>
+<a href="quizzes.html" class="hover:text-white transition">Quizzes</a>
+<a href="community.html" class="hover:text-white transition">Community</a>
+<a href="competitions.html" class="hover:text-white transition">Competitions</a>
+<a href="ai-tools.html" class="hover:text-white transition">AI Tools</a>
+</div>
+<div class="flex gap-4">
+<a href="login.html" class="px-5 py-2 text-sm font-semibold rounded-full border border-brand-green text-brand-green transition">Log In</a>
+<a href="signup.html" class="px-5 py-2 text-sm font-semibold rounded-full bg-brand-green text-white hover:bg-[#639F16] transition">Get Started Free</a>
+</div>
+</nav>
+
+<!-- Login Container -->
+<main class="flex-1 flex items-center justify-center px-4 py-12">
+<div class="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl w-full max-w-md border border-gray-100">
+<div class="text-center mb-8 flex flex-col items-center">
+<img src="logo.svg" alt="Medical World Logo" class="h-16 w-auto mb-4">
+<h1 class="text-3xl font-bold text-navy-900">Welcome Back</h1>
+<p class="text-gray-500 text-sm mt-1">Log in to continue your medical learning journey</p>
+</div>
+
+<form onsubmit="event.preventDefault(); alert('Login submitted successfully!');" class="space-y-5">
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Email or Username</label>
+<input type="email" required placeholder="doctor@medicalworld.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm bg-gray-50 focus:bg-white transition">
+</div>
+
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider">Password</label>
+<a href="#" onclick="alert('Password reset link has been sent to your email.'); return false;" class="text-xs text-brand-blue font-semibold hover:underline">Forgot password?</a>
+</div>
+<input type="password" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm bg-gray-50 focus:bg-white transition">
+</div>
+
+<div class="flex items-center justify-between text-sm">
+<label class="flex items-center gap-2 text-gray-600 cursor-pointer">
+<input type="checkbox" class="rounded border-gray-300 text-brand-blue focus:ring-brand-blue">
+<span>Remember me for 30 days</span>
+</label>
+</div>
+
+<button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-blue to-brand-green text-white font-bold hover:opacity-95 transition shadow-md hover:shadow-lg">
+Log In →
+</button>
+</form>
+
+<div class="relative my-8 text-center">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-200"></div></div>
+<span class="relative bg-white px-4 text-xs font-medium text-gray-400">OR CONTINUE WITH</span>
+</div>
+
+<div class="grid grid-cols-2 gap-3">
+<button onclick="alert('Google authentication connected.');" class="flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-200 rounded-xl hover:bg-gray-50 text-xs font-semibold text-gray-700 transition">
+<svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.3-.8-.4-1.8-.4-2.8s.1-2 .4-2.8L1.9 6.3C.7 8.7 0 10.3 0 12s.7 3.3 1.9 5.7l3.7-2.9z"/><path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.3-6.4-5.2L1.9 16C3.7 19.7 7.5 23 12 23z"/></svg>
+Google
+</button>
+<button onclick="alert('MedID SSO connected.');" class="flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-200 rounded-xl hover:bg-gray-50 text-xs font-semibold text-navy-900 transition">
+<span class="w-4 h-4 rounded-full bg-brand-blue text-white flex items-center justify-center text-[10px] font-bold">M</span>
+MedID SSO
+</button>
+</div>
+
+<p class="text-center text-xs text-gray-500 mt-8">
+Don't have an account? <a href="signup.html" class="text-brand-blue font-bold hover:underline">Sign up for free</a>
+</p>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy-950 text-gray-400 py-8 px-8 border-t border-white/5 text-center text-xs">
+<p>© 2026 Medical World. All rights reserved. <a href="index.html" class="text-gray-300 hover:text-white ml-2">Back to Home</a></p>
+</footer>
+</body>
+</html>

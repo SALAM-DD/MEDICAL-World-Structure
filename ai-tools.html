@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Study Assistant - Medical World</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+900: '#0b192c',
+950: '#060d19',
+800: '#13233c',
+},
+brand: {
+blue: '#0072CE',
+green: '#74B71B',
+yellow: '#74B71B',
+accent: '#0072CE'
+}
+}
+}
+}
+}
+</script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 min-h-screen flex flex-col justify-between">
+<!-- Navigation -->
+<nav class="bg-navy-900 text-white flex justify-between items-center px-8 py-5 border-b border-white/10">
+<a href="index.html" class="flex items-center gap-3">
+<img src="logo-icon.svg" alt="Medical World Icon" class="h-9 w-auto">
+<span class="font-bold text-xl tracking-tight text-white flex items-center">
+<span class="text-brand-blue">Medical</span>&nbsp;<span class="text-brand-green">World</span></span>
+</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+<a href="index.html" class="hover:text-white transition">Home</a>
+<a href="learning.html" class="hover:text-white transition">Learning</a>
+<a href="quizzes.html" class="hover:text-white transition">Quizzes</a>
+<a href="community.html" class="hover:text-white transition">Community</a>
+<a href="competitions.html" class="hover:text-white transition">Competitions</a>
+<a href="ai-tools.html" class="text-white border-b-2 border-brand-green pb-1">AI Tools</a>
+</div>
+<div class="flex gap-4">
+<a href="login.html" class="px-5 py-2 text-sm font-semibold rounded-full border border-gray-600 hover:border-white transition">Log In</a>
+<a href="signup.html" class="px-5 py-2 text-sm font-semibold rounded-full bg-brand-green text-white hover:bg-[#639F16] transition">Get Started Free</a>
+</div>
+</nav>
+
+<!-- Header -->
+<header class="bg-navy-900 text-white px-8 py-14 lg:px-24">
+<div class="max-w-4xl">
+<div class="inline-block bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full mb-4 shadow">
+Powered by Medical World AI 2.0
+</div>
+<h1 class="text-4xl lg:text-5xl font-bold mb-4">AI Study Assistant & <span class="text-brand-green">Quiz Generator</span></h1>
+<p class="text-gray-300 text-lg">Input any medical topic, lecture note summary, or symptoms list to instantly generate tailored practice questions, mnemonic summaries, or differential diagnoses.</p>
+</div>
+</header>
+
+<!-- Main AI Interface -->
+<main class="py-12 px-8 lg:px-24 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Generator Inputs -->
+<div class="lg:col-span-5 bg-white p-8 rounded-3xl shadow-sm border border-gray-200 space-y-6">
+<h2 class="text-2xl font-bold text-navy-900">Configure AI Generator</h2>
+
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Study Topic or Case Text</label>
+<textarea id="ai-topic" rows="4" placeholder="Enter topic (e.g. Acute Renal Failure causes, Cranial Nerves IX & X examination, Antibiotic spectrum)..." class="w-full p-4 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition">Glomerulonephritis vs Nephrotic Syndrome comparison and clinical presentations</textarea>
+</div>
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Question Type</label>
+<select class="w-full p-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600">
+<option>Multiple Choice (MCQ)</option>
+<option>Clinical Vignettes</option>
+<option>Flashcards</option>
+</select>
+</div>
+
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Difficulty</label>
+<select class="w-full p-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600">
+<option>Pre-Clinical</option>
+<option selected>USMLE Step 1 / Clinical</option>
+<option>Specialist / Residency</option>
+</select>
+</div>
+</div>
+
+<button onclick="generateAIQuiz()" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-blue to-brand-green text-white font-bold hover:opacity-95 transition shadow-md flex items-center justify-center gap-2">
+<span>✨ Generate AI Quiz Questions</span>
+</button>
+</div>
+
+<!-- Interactive Response Output Preview -->
+<div class="lg:col-span-7 bg-navy-900 text-white p-8 rounded-3xl shadow-xl border border-white/10 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center pb-4 border-b border-white/10 mb-6">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-brand-green animate-pulse"></span>
+<span class="text-xs font-bold text-brand-green uppercase tracking-wider">AI Generated Output</span>
+</div>
+<span class="text-xs text-gray-400">Response time: 0.4s</span>
+</div>
+
+<div id="ai-response-area" class="space-y-4 font-sans">
+<div class="bg-navy-800 p-5 rounded-2xl border border-white/5">
+<span class="text-xs text-brand-green font-bold uppercase">Question #1 (Generated)</span>
+<h4 class="font-bold text-lg text-white mt-1 mb-3">Which of the following clinical findings is classic for Nephrotic Syndrome rather than Nephritic Syndrome?</h4>
+<ul class="space-y-2 text-sm text-gray-300">
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer">A) Gross hematuria with dysmorphic red blood cells</li>
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer font-bold text-brand-green">B) Massive proteinuria (> 3.5g/24 hours) & generalized edema</li>
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer">C) Oliguria and hypertension</li>
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer">D) Red blood cell casts in urine microscopy</li>
+</ul>
+</div>
+
+<div class="bg-navy-800/60 p-4 rounded-xl text-xs text-gray-300 leading-relaxed border border-white/5">
+<strong>💡 AI Mnemonic Tip:</strong> <strong>NephroTIC</strong> = Heavy <strong>P</strong>roteinuria, <strong>O</strong>edema, <strong>H</strong>yperlipidemia (POH). <strong>NephriTIC</strong> = <strong>I</strong>nflammation, <strong>H</strong>ematuria, <strong>H</strong>ypertension (IHH).
+</div>
+</div>
+</div>
+
+<div class="pt-6 mt-6 border-t border-white/10 flex justify-between items-center">
+<span class="text-xs text-gray-400">Export quiz to PDF or save to Flashcards deck</span>
+<div class="flex gap-3">
+<button onclick="alert('Exported quiz to PDF');" class="px-4 py-2 rounded-lg bg-navy-800 hover:bg-navy-800/80 text-xs font-semibold">📥 Export PDF</button>
+<button onclick="alert('Saved to My Study Decks');" class="px-4 py-2 rounded-lg bg-brand-green text-white text-xs font-bold hover:bg-[#639F16] transition shadow">⭐ Save Deck</button>
+</div>
+</div>
+</div>
+</main>
+
+<script>
+function generateAIQuiz() {
+const topic = document.getElementById('ai-topic').value;
+const area = document.getElementById('ai-response-area');
+area.innerHTML = `
+<div class="bg-navy-800 p-5 rounded-2xl border border-white/5 animate-fade-in">
+<span class="text-xs text-brand-green font-bold uppercase">Question #1 (Generated for: ${topic.substring(0, 30)}...)</span>
+<h4 class="font-bold text-lg text-white mt-1 mb-3">What is the most immediate diagnostic step for suspected acute coronary syndrome presenting with ST-elevation?</h4>
+<ul class="space-y-2 text-sm text-gray-300">
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer">A) Wait for 12-hour Troponin T results</li>
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer font-bold text-brand-green">B) Immediate Percutaneous Coronary Intervention (PCI) / Reperfusion</li>
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer">C) Outpatient Echocardiogram in 2 weeks</li>
+<li class="p-2 rounded bg-navy-950/50 hover:bg-navy-950 cursor-pointer">D) High-dose oral NSAIDs</li>
+</ul>
+</div>
+<div class="bg-navy-800/60 p-4 rounded-xl text-xs text-gray-300 leading-relaxed border border-white/5">
+<strong>💡 AI Clinical Note:</strong> Always evaluate hemodynamic stability first prior to ordering invasive diagnostic imaging.
+</div>
+`;
+}
+</script>
+
+<!-- Footer -->
+<footer class="bg-navy-950 text-gray-400 py-16 px-8 lg:px-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-gray-800 pb-12">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<img src="logo.svg" alt="Medical World Logo" class="h-10 w-auto">
+</div>
+<p class="text-sm">Rebuilding a global medical learning ecosystem — one student at a time.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Platform</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="learning.html" class="hover:text-white transition">Learning Hub</a></li>
+<li><a href="quizzes.html" class="hover:text-white transition">Quizzes</a></li>
+<li><a href="quizzes.html#past-questions" class="hover:text-white transition">Past Questions</a></li>
+<li><a href="ai-tools.html" class="text-white font-semibold">AI Assistant</a></li>
+<li><a href="competitions.html#leaderboard" class="hover:text-white transition">Leaderboard</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Community</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="community.html" class="hover:text-white transition">News Feed</a></li>
+<li><a href="community.html#discussions" class="hover:text-white transition">Discussions</a></li>
+<li><a href="competitions.html" class="hover:text-white transition">Competitions</a></li>
+<li><a href="community.html#members" class="hover:text-white transition">Members</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="about.html" class="hover:text-white transition">About Medical World</a></li>
+<li><a href="rebuild.html" class="hover:text-white transition">Join the Rebuild</a></li>
+<li><a href="about.html#partners" class="hover:text-white transition">Partners</a></li>
+<li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2026 Medical World. Founded by Abdulazeez F. O. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>

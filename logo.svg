@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Definitions for clean gradients -->
+  <defs>
+    <linearGradient id="mwGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0072CE" />
+      <stop offset="60%" stop-color="#74B71B" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(0, 0)">
+    <!-- GREEN STETHOSCOPE SHIELD OUTLINE -->
+    <path d="M 195 90 
+             L 135 125 
+             C 120 220 160 320 250 365 
+             C 340 320 380 220 365 125 
+             L 305 90" 
+          fill="none" stroke="#74B71B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Top Green Stethoscope Ear Nodes -->
+    <circle cx="195" cy="90" r="14" fill="#74B71B" />
+    <circle cx="305" cy="90" r="14" fill="#74B71B" />
+
+    <!-- BLUE SWOOSH / ORBIT RING -->
+    <path d="M 160 300 
+             C 90 350 140 400 250 395 
+             C 330 390 410 350 440 300" 
+          fill="none" stroke="#0072CE" stroke-width="13" stroke-linecap="round" />
+    <circle cx="440" cy="300" r="16" fill="none" stroke="#0072CE" stroke-width="10" />
+
+    <!-- MONOGRAM (M & Stethoscope Cord Loop) -->
+    <!-- Blue left leg & center down diagonal -->
+    <path d="M 200 295 L 220 140 L 250 260" 
+          fill="none" stroke="#0072CE" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Green right diagonal & loop stem -->
+    <path d="M 250 260 
+             L 275 145 
+             C 290 200 300 240 280 270 
+             C 265 295 240 280 265 260 
+             C 285 245 305 270 310 240 
+             L 315 145" 
+          fill="none" stroke="#74B71B" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- TEXT BELOW LOGO -->
+  <text x="250" y="445" text-anchor="middle" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-size="38" font-weight="700" fill="#0072CE" letter-spacing="-0.5">
+    Medical <tspan font-weight="600" fill="#74B71B">World</tspan>
+  </text>
+</svg>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Free - Medical World</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+900: '#0b192c',
+950: '#060d19',
+800: '#13233c',
+},
+brand: {
+blue: '#0072CE',
+green: '#74B71B',
+yellow: '#74B71B',
+accent: '#0072CE'
+}
+}
+}
+}
+}
+</script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-navy-900 min-h-screen flex flex-col justify-between">
+<!-- Navigation -->
+<nav class="bg-navy-900 text-white flex justify-between items-center px-8 py-5 border-b border-white/10">
+<a href="index.html" class="flex items-center gap-3">
+<img src="logo-icon.svg" alt="Medical World Icon" class="h-9 w-auto">
+<span class="font-bold text-xl tracking-tight text-white flex items-center">
+<span class="text-brand-blue">Medical</span>&nbsp;<span class="text-brand-green">World</span></span>
+</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+<a href="index.html" class="hover:text-white transition">Home</a>
+<a href="learning.html" class="hover:text-white transition">Learning</a>
+<a href="quizzes.html" class="hover:text-white transition">Quizzes</a>
+<a href="community.html" class="hover:text-white transition">Community</a>
+<a href="competitions.html" class="hover:text-white transition">Competitions</a>
+<a href="ai-tools.html" class="hover:text-white transition">AI Tools</a>
+</div>
+<div class="flex gap-4">
+<a href="login.html" class="px-5 py-2 text-sm font-semibold rounded-full border border-gray-600 hover:border-white transition">Log In</a>
+<a href="signup.html" class="px-5 py-2 text-sm font-semibold rounded-full bg-brand-green text-white hover:bg-[#639F16] transition">Get Started Free</a>
+</div>
+</nav>
+
+<!-- Signup Container -->
+<main class="flex-1 flex items-center justify-center px-4 py-12">
+<div class="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl w-full max-w-xl border border-gray-100">
+<div class="text-center mb-8 flex flex-col items-center">
+<img src="logo.svg" alt="Medical World Logo" class="h-16 w-auto mb-4">
+<div class="inline-block bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider shadow">Free Account Creation</div>
+<h1 class="text-3xl font-bold text-navy-900">Join 10,000+ Medical Minds</h1>
+<p class="text-gray-500 text-sm mt-1">Start learning, practicing quizzes, and connecting today.</p>
+</div>
+
+<form onsubmit="event.preventDefault(); alert('Account created successfully! Welcome to Medical World.'); window.location.href='learning.html';" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">First Name</label>
+<input type="text" required placeholder="Aisha" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm bg-gray-50 focus:bg-white transition">
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Last Name</label>
+<input type="text" required placeholder="Bello" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm bg-gray-50 focus:bg-white transition">
+</div>
+</div>
+
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Email Address</label>
+<input type="email" required placeholder="aisha.bello@medstudent.org" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm bg-gray-50 focus:bg-white transition">
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Password</label>
+<input type="password" required placeholder="Min 8 characters" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm bg-gray-50 focus:bg-white transition">
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Current Academic Level</label>
+<select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue text-sm bg-gray-50 focus:bg-white transition">
+<option>Pre-Med / Basic Sciences</option>
+<option selected>1st / 2nd Year Pre-Clinical</option>
+<option>3rd / 4th Year Clinical Student</option>
+<option>Final Year / House Officer</option>
+<option>Resident Doctor / Specialist</option>
+</select>
+</div>
+</div>
+
+<div>
+<label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Primary Interest Areas</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+<label class="flex items-center gap-2 p-2 border border-gray-200 rounded-lg text-xs cursor-pointer hover:bg-gray-50">
+<input type="checkbox" checked class="rounded text-brand-blue">
+<span>Anatomy</span>
+</label>
+<label class="flex items-center gap-2 p-2 border border-gray-200 rounded-lg text-xs cursor-pointer hover:bg-gray-50">
+<input type="checkbox" checked class="rounded text-brand-blue">
+<span>Pharmacology</span>
+</label>
+<label class="flex items-center gap-2 p-2 border border-gray-200 rounded-lg text-xs cursor-pointer hover:bg-gray-50">
+<input type="checkbox" checked class="rounded text-brand-blue">
+<span>Pathology</span>
+</label>
+<label class="flex items-center gap-2 p-2 border border-gray-200 rounded-lg text-xs cursor-pointer hover:bg-gray-50">
+<input type="checkbox" class="rounded text-brand-blue">
+<span>Physiology</span>
+</label>
+<label class="flex items-center gap-2 p-2 border border-gray-200 rounded-lg text-xs cursor-pointer hover:bg-gray-50">
+<input type="checkbox" class="rounded text-brand-blue">
+<span>Internal Medicine</span>
+</label>
+<label class="flex items-center gap-2 p-2 border border-gray-200 rounded-lg text-xs cursor-pointer hover:bg-gray-50">
+<input type="checkbox" class="rounded text-brand-blue">
+<span>Surgery</span>
+</label>
+</div>
+</div>
+
+<label class="flex items-start gap-2 text-xs text-gray-600">
+<input type="checkbox" required class="rounded mt-0.5 border-gray-300 text-brand-blue">
+<span>I agree to the Terms of Service and Privacy Policy of Medical World.</span>
+</label>
+
+<button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-blue to-brand-green text-white font-bold hover:opacity-95 transition shadow-md hover:shadow-lg text-base">
+Create Account Free →
+</button>
+</form>
+
+<p class="text-center text-xs text-gray-500 mt-8">
+Already have an account? <a href="login.html" class="text-brand-blue font-bold hover:underline">Log In</a>
+</p>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy-950 text-gray-400 py-8 px-8 border-t border-white/5 text-center text-xs">
+<p>© 2026 Medical World. All rights reserved. <a href="index.html" class="text-gray-300 hover:text-white ml-2">Back to Home</a></p>
+</footer>
+</body>
+</html>

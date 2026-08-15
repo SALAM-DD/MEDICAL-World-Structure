@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Community - Medical World</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+900: '#0b192c',
+950: '#060d19',
+800: '#13233c',
+},
+brand: {
+blue: '#0072CE',
+green: '#74B71B',
+yellow: '#74B71B',
+accent: '#0072CE'
+}
+}
+}
+}
+}
+</script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 min-h-screen flex flex-col justify-between">
+<!-- Navigation -->
+<nav class="bg-navy-900 text-white flex justify-between items-center px-8 py-5 border-b border-white/10">
+<a href="index.html" class="flex items-center gap-3">
+<img src="logo-icon.svg" alt="Medical World Icon" class="h-9 w-auto">
+<span class="font-bold text-xl tracking-tight text-white flex items-center">
+<span class="text-brand-blue">Medical</span>&nbsp;<span class="text-brand-green">World</span></span>
+</a>
+<div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+<a href="index.html" class="hover:text-white transition">Home</a>
+<a href="learning.html" class="hover:text-white transition">Learning</a>
+<a href="quizzes.html" class="hover:text-white transition">Quizzes</a>
+<a href="community.html" class="text-white border-b-2 border-brand-green pb-1">Community</a>
+<a href="competitions.html" class="hover:text-white transition">Competitions</a>
+<a href="ai-tools.html" class="hover:text-white transition">AI Tools</a>
+</div>
+<div class="flex gap-4">
+<a href="login.html" class="px-5 py-2 text-sm font-semibold rounded-full border border-gray-600 hover:border-white transition">Log In</a>
+<a href="signup.html" class="px-5 py-2 text-sm font-semibold rounded-full bg-brand-green text-white hover:bg-[#639F16] transition">Get Started Free</a>
+</div>
+</nav>
+
+<!-- Header -->
+<header class="bg-navy-900 text-white px-8 py-14 lg:px-24">
+<div class="max-w-4xl">
+<div class="inline-block bg-brand-blue/30 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-brand-blue/30">
+10,000+ Medical Members Worldwide
+</div>
+<h1 class="text-4xl lg:text-5xl font-bold mb-4">Medical World <span class="text-brand-green">Community</span></h1>
+<p class="text-gray-300 text-lg">Discuss complex clinical cases, share exam strategies, collaborate on research, and build lasting professional connections.</p>
+</div>
+</header>
+
+<!-- Main Feed & Sidebar -->
+<main class="py-12 px-8 lg:px-24 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Feed Column -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Create Post Box -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+<div class="flex gap-4 items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-navy-900 text-brand-green font-bold flex items-center justify-center text-sm border border-brand-green/30">YOU</div>
+<input type="text" placeholder="Share a case, question, or medical update with the community..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue">
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-gray-100">
+<div class="flex gap-3 text-xs text-gray-500 font-semibold">
+<button class="hover:text-brand-blue">📷 Add Image</button>
+<button class="hover:text-brand-blue">📊 Poll</button>
+<button class="hover:text-brand-blue">🏷️ Tag Topic</button>
+</div>
+<button onclick="alert('Post published to Medical World feed!');" class="bg-brand-green text-white font-bold px-5 py-2 rounded-xl text-xs hover:bg-[#639F16] transition shadow">Post →</button>
+</div>
+</div>
+
+<!-- Post 1 -->
+<article id="discussions" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 space-y-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center">FA</div>
+<div>
+<h4 class="font-bold text-navy-900 text-sm">Fatima A., MBBS Student</h4>
+<span class="text-xs text-gray-400">2 hours ago • Cardiology Case</span>
+</div>
+</div>
+<span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full">Clinical Case</span>
+</div>
+<p class="text-sm text-gray-700 leading-relaxed">
+A 45-year-old female presents with progressive dyspnea on exertion, orthopnea, and a mid-diastolic opening snap followed by a rumbling murmur heard best at the apex in the left lateral decubitus position. History is significant for rheumatic fever at age 12. What valve is most likely affected?
+</p>
+<div class="flex items-center gap-6 pt-3 border-t border-gray-100 text-xs text-gray-500 font-semibold">
+<button onclick="alert('Liked post');" class="hover:text-blue-600 flex items-center gap-1">❤️ 342 Likes</button>
+<button onclick="alert('Viewing 48 comments');" class="hover:text-blue-600 flex items-center gap-1">💬 48 Discussion Comments</button>
+<button onclick="alert('Post saved');" class="hover:text-blue-600 flex items-center gap-1">🔖 Bookmark</button>
+</div>
+</article>
+
+<!-- Post 2 -->
+<article class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 space-y-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-yellow-100 text-yellow-800 font-bold flex items-center justify-center">KO</div>
+<div>
+<h4 class="font-bold text-navy-900 text-sm">Kola O., Resident Doctor</h4>
+<span class="text-xs text-gray-400">5 hours ago • High-Yield Revision</span>
+</div>
+</div>
+<span class="bg-yellow-50 text-yellow-800 text-xs font-semibold px-2.5 py-1 rounded-full">Study Advice</span>
+</div>
+<p class="text-sm text-gray-700 leading-relaxed">
+Top tip for Pharmacology revision: Don't memorize drug names in isolation! Group them strictly by receptor mechanism (e.g. Beta-1 selective vs non-selective vs combined alpha/beta blockers). Check the AI Study tool on Medical World to generate targeted active-recall cards for your weak drugs!
+</p>
+<div class="flex items-center gap-6 pt-3 border-t border-gray-100 text-xs text-gray-500 font-semibold">
+<button onclick="alert('Liked post');" class="hover:text-blue-600 flex items-center gap-1">❤️ 512 Likes</button>
+<button onclick="alert('Viewing 89 comments');" class="hover:text-blue-600 flex items-center gap-1">💬 89 Discussion Comments</button>
+<button onclick="alert('Post saved');" class="hover:text-blue-600 flex items-center gap-1">🔖 Bookmark</button>
+</div>
+</article>
+</div>
+
+<!-- Sidebar Column -->
+<aside id="members" class="space-y-6">
+<!-- Active Members Card -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+<h3 class="font-bold text-navy-900 text-base mb-4">Top Community Contributors</h3>
+<div class="space-y-4 text-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-700 font-bold flex items-center justify-center">FA</div>
+<div>
+<div class="font-bold text-gray-800">Fatima A.</div>
+<div class="text-gray-400">9,840 Points</div>
+</div>
+</div>
+<button onclick="alert('Followed Fatima');" class="px-3 py-1 rounded-full border border-blue-600 text-blue-600 font-bold hover:bg-blue-50">Follow</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center">KO</div>
+<div>
+<div class="font-bold text-gray-800">Kola O.</div>
+<div class="text-gray-400">8,210 Points</div>
+</div>
+</div>
+<button onclick="alert('Followed Kola');" class="px-3 py-1 rounded-full border border-blue-600 text-blue-600 font-bold hover:bg-blue-50">Follow</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-navy-900 text-brand-yellow font-bold flex items-center justify-center">AF</div>
+<div>
+<div class="font-bold text-gray-800">Abdulazeez F. O.</div>
+<div class="text-gray-400">Founder & Med Lead</div>
+</div>
+</div>
+<button onclick="alert('Followed Abdulazeez');" class="px-3 py-1 rounded-full bg-navy-900 text-white font-bold">Connected</button>
+</div>
+</div>
+</div>
+
+<!-- Trending Topics Card -->
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+<h3 class="font-bold text-navy-900 text-base mb-4">Trending Study Groups</h3>
+<ul class="space-y-3 text-xs text-gray-600">
+<li class="flex justify-between items-center font-medium hover:text-blue-600 cursor-pointer">
+<span># USMLE Step 1 Sprint 2026</span>
+<span class="bg-gray-100 px-2 py-0.5 rounded text-gray-500">1.2k members</span>
+</li>
+<li class="flex justify-between items-center font-medium hover:text-blue-600 cursor-pointer">
+<span># Anatomy Practical Spotters</span>
+<span class="bg-gray-100 px-2 py-0.5 rounded text-gray-500">840 members</span>
+</li>
+<li class="flex justify-between items-center font-medium hover:text-blue-600 cursor-pointer">
+<span># ECG Interpretation Masterclass</span>
+<span class="bg-gray-100 px-2 py-0.5 rounded text-gray-500">2.4k members</span>
+</li>
+</ul>
+</div>
+</aside>
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy-950 text-gray-400 py-16 px-8 lg:px-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-gray-800 pb-12">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<img src="logo.svg" alt="Medical World Logo" class="h-10 w-auto">
+</div>
+<p class="text-sm">Rebuilding a global medical learning ecosystem — one student at a time.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Platform</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="learning.html" class="hover:text-white transition">Learning Hub</a></li>
+<li><a href="quizzes.html" class="hover:text-white transition">Quizzes</a></li>
+<li><a href="quizzes.html#past-questions" class="hover:text-white transition">Past Questions</a></li>
+<li><a href="ai-tools.html" class="hover:text-white transition">AI Assistant</a></li>
+<li><a href="competitions.html#leaderboard" class="hover:text-white transition">Leaderboard</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Community</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="community.html" class="text-white font-semibold">News Feed</a></li>
+<li><a href="community.html#discussions" class="text-white font-semibold">Discussions</a></li>
+<li><a href="competitions.html" class="hover:text-white transition">Competitions</a></li>
+<li><a href="community.html#members" class="text-white font-semibold">Members</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="space-y-3 text-sm">
+<li><a href="about.html" class="hover:text-white transition">About Medical World</a></li>
+<li><a href="rebuild.html" class="hover:text-white transition">Join the Rebuild</a></li>
+<li><a href="about.html#partners" class="hover:text-white transition">Partners</a></li>
+<li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2026 Medical World. Founded by Abdulazeez F. O. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>
